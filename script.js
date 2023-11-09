@@ -33,6 +33,8 @@ getCountryData('usa');
 getCountryData('india');    
 
 */
+
+
 const renderCountry = function (data, className = '') {
   const html = ` 
 <article class="country ${className}">
@@ -49,6 +51,7 @@ const renderCountry = function (data, className = '') {
   countriesContainer.style.opacity = 1;
 };
 
+/*
 const getCountryAndNeighbour = function (country) {
   //Ajax call country 1
   const request = new XMLHttpRequest();
@@ -79,3 +82,20 @@ const getCountryAndNeighbour = function (country) {
 };
 
 getCountryAndNeighbour('portugal');
+
+*/
+
+const request = fetch('https://restcountries.com/v3.1/name/portugal');
+console.log(request);
+
+const getCountryData = function (country) {
+  fetch(`https://restcountries.com/v3.1/name/${country}`)
+  .then(response =>response.json()
+  .then(data =>renderCountry(data[0]))
+  )
+}
+getCountryData('portugal');
+
+
+
+
