@@ -24,6 +24,7 @@ body {
   display: flex;
   flex-flow: column;
   align-items: center;
+  
 }
 
 .countries {
@@ -33,6 +34,7 @@ body {
   font-size: 2rem;
   opacity: 0;
   transition: opacity 1s;
+  flex-wrap: wrap;
 }
 
 .country {
@@ -41,7 +43,7 @@ body {
   font-size: 1.8rem;
   width: 30rem;
   border-radius: 0.7rem;
-  margin: 0 3rem;
+  margin: 13px 3rem;
   /* overflow: hidden; */
 }
 
